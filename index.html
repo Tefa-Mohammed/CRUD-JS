@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="mx-auto my-4 w-75 text-muted">
+            <label for="productName">Product Name:</label>
+            <input type="text" class="form-control" id="productName">
+        </div>
+
+        <div class="mx-auto my-4 w-75 text-muted">
+            <label for="productPrice">Product Price:</label>
+            <input type="number" class="form-control" id="productPrice">
+        </div>
+
+        <div class="mx-auto my-4 w-75 text-muted">
+            <label for="productCategory">Product Category:</label>
+            <input type="text" class="form-control" id="productCategory">
+        </div>
+
+        <div class="mx-auto my-4 w-75 text-muted">
+            <label for="productdesc">Product description:</label>
+            <textarea type="text" class="form-control" id="productdesc"></textarea>
+        </div>
+
+        <div class="w-75 mx-auto">
+            <button class="btn btn-info" id="submit" onclick="submitProduct();">Add Product</button>
+        </div>
+        <input type="text" onkeyup="searchProduct(this.value);" class="form-control w-50 mx-auto my-4" id="search"
+            placeholder="Search ..." autocomplete="off">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
